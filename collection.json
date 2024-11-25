@@ -21,12 +21,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/write",
+					"raw": "http://localhost:8001/write",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8000",
+					"port": "8001",
 					"path": [
 						"write"
 					]
@@ -40,12 +40,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/notes",
+					"raw": "http://localhost:8001/notes",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8000",
+					"port": "8001",
 					"path": [
 						"notes"
 					]
@@ -59,12 +59,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/notes",
+					"raw": "http://localhost:8001/notes",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8000",
+					"port": "8001",
 					"path": [
 						"notes"
 					]
@@ -87,12 +87,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8000/notes/Laundry",
+					"raw": "http://localhost:8001/notes/Laundry",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8000",
+					"port": "8001",
 					"path": [
 						"notes",
 						"Laundry"
@@ -107,12 +107,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/UploadForm.html",
+					"raw": "http://localhost:8001/UploadForm.html",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8000",
+					"port": "8001",
 					"path": [
 						"UploadForm.html"
 					]
@@ -126,12 +126,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/notes/Laundry",
+					"raw": "http://localhost:8001/notes/Laundry",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8000",
+					"port": "8001",
 					"path": [
 						"notes",
 						"Laundry"
