@@ -27,22 +27,34 @@ let notes = {};
 if (fs.existsSync(options.cache)) {
   try {
     const data = fs.readFileSync(options.cache, "utf8");
+
+    if (!data.trim()) {
+      throw new Error("Cache file is empty");
+    }
+
     const cacheNotes = JSON.parse(data);
 
-    notes = cacheNotes.reduce((acc, { note_name, note }) => {
-      acc[note_name] = { note_name, note };
+    if (!Array.isArray(cacheNotes)) {
+      throw new Error("Invalid cache file format. Expected an array.");
+    }
+
+    notes = cacheNotes.reduce((acc, item) => {
+      if (item && item.note_name && item.note) {
+        acc[item.note_name] = { note_name: item.note_name, note: item.note };
+      }
       return acc;
     }, {});
 
     console.log(`Cache file loaded from ${options.cache}`);
   } catch (error) {
-    console.error("Error reading cache file:", error);
+    console.error("Error reading cache file:", error.message);
     process.exit(1);
   }
 } else {
   fs.writeFileSync(options.cache, JSON.stringify([]));
   console.log(`Cache file created at ${options.cache}`);
 }
+
 
 const app = express();
 
